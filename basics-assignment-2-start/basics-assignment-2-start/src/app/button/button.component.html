@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <label>Update username</label>
+    <input
+      [(ngModel)]="username"
+      class="form-control"
+      (input)="updateUsername($event)"
+    />
+  </div>
+  <div class="row">
+    <p>username: {{ username }}</p>
+  </div>
+  <div class="row">
+    <button
+      type="button"
+      class="btn btn-success m-8"
+      [disabled]="!checkUsername"
+      (click)="resetUsername()"
+    >
+      Reset username
+    </button>
+  </div>
+</div>
